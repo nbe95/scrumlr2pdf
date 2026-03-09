@@ -12,10 +12,10 @@ for md_in in ./*.md; do
     sed -i "/\!\[.\+\](.\+)/d" "$md_tmp"
 
     echo -e "\tCreating $pdf_out..."
-    docker run --rm -v "$(pwd):/pandoc" -u $(id -u):$(id -g) pandocker \
+    docker run --rm -v "$(pwd):/pandoc" -u $(id -u):$(id -g) scrumlr2pdf \
         --pdf-engine=lualatex \
         --template=eisvogel \
-        -H pandocker-headers.tex \
+        -H headers.tex \
         -V geometry="margin=2.0cm" \
         -V mainfont="Noto Color Emoji" \
         -V colorlinks=true \

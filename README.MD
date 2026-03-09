@@ -17,3 +17,9 @@ retrospective results easily.
 1. Place the `.md` file in this directory.
 1. `./run.sh`
 1. Profit.
+
+## Prerequisites
+
+```sh
+docker build -t scrumlr2pdf .
+```
